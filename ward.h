@@ -8,8 +8,8 @@
 class Ward{
     public:
         static const size_t CAP=200;
-        void load(std::ifstream& ins);
-        void save(std::ofstream& outs);
+        void load(std::istream& ins);
+        void save(std::ostream& outs);
         void add(Household& tmp);
         void display(std::ostream& outs);
         void remove(std::string name);

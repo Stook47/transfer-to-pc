@@ -5,7 +5,6 @@
 using namespace std;
 
 // The menu function displays the menu and returns the user's choice
-int menu();
 
 int main(){
     Household tmp;

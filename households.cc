@@ -15,10 +15,10 @@ Household::Household(){
 
 //Mutators
 void Household::set_head(const string& hd){
-    house_head = hd;
+    house_head == hd;
 }
 void Household::set_address(const string& add){
-    address = add;
+    address == add;
 }
 void Household::set_occupants(int num){
     occupants = num;
@@ -43,13 +43,25 @@ int Household::get_income()const{
 
 //Input and output
 void Household::input(istream& ins){
+    if(ins.eof()){
+        cout << "You have reached the end of the file" << endl;
+        return;
+    }
+    while(ins.peek() == '\n' || ins.peek() == '\r'){
+        ins.ignore();
+    }
     getline(ins, house_head);
     getline(ins, address);
-    cin >> occupants;
-    cin >> income;
+    ins >> occupants;
+    ins.ignore();
+    ins >> income;
+    ins.ignore();
 }
 void Household::output(ostream& outs)const{
-
+    outs << house_head << endl;
+    outs << address << endl;
+    outs << occupants << endl;
+    outs << income << endl;
 }
 
 //Overloaded i/o operators

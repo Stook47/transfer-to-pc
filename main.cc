@@ -48,6 +48,7 @@ int main(){
 		while(cin.peek() == '\n' || cin.peek() == '\r')
 			cin.ignore();
 		getline(cin,name);
+		cout << name << endl;
 		neighborhood.remove(name);
 		break;
 	    case 4:
@@ -82,7 +83,7 @@ int main(){
 	    } // bottom of the switch
 	} while(choice != 0); 
         // bottom of the while
-    	outs.open("households.txt");
+    	outs.open("householdsTest.txt");
 	if(outs.fail())
 	    cout<<"Unable to save data to file.\n";
 	else
